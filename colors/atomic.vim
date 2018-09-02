@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic
-"  Version : 3.1.0
+"  Version : 3.1.1
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -351,8 +351,8 @@ execute 'hi LineNr '       . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' .
 execute 'hi NonText '      . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:base1 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi SpecialKey '   . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:base1 . ' gui=' . s:non . ' cterm=' . s:non
 " -------------------------.
-execute 'hi Search '       . s:envir . 'fg=' . s:acr70 . ' ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:bld . ' cterm=' . s:bld
-execute 'hi MatchParen '                                     . s:envir . 'bg=' . s:base2 . ' gui=' . s:bld . ' cterm=' . s:bld
+execute 'hi Search '       . s:envir . 'fg=' . s:acr70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:bld . ' cterm=' . s:bld
+execute 'hi MatchParen '                                     . s:envir . 'bg=' . s:non . ' gui=' . s:bld . ' cterm=' . s:bld
 " -------------------------.
 execute 'hi TabLine '      . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:base3 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi TabLineSel '   . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:acc50 . ' gui=' . s:non . ' cterm=' . s:non
@@ -393,10 +393,10 @@ if has('gui_running')
 	execute 'hi SpellLocal     gui=' . s:unc . ' cterm=' . s:unc
 	execute 'hi SpellRare      gui=' . s:unc . ' cterm=' . s:unc
 else
-	execute 'hi SpellBad '     . s:envir . 'fg=' . s:acr50 . ' ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:unl . ' cterm=' . s:unl
-	execute 'hi SpellCap '     . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:unl . ' cterm=' . s:unl
-	execute 'hi SpellLocal '   . s:envir . 'fg=' . s:aco50 . ' ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:unl . ' cterm=' . s:unl
-	execute 'hi SpellRare '    . s:envir . 'fg=' . s:acv50 . ' ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:unl . ' cterm=' . s:unl
+	execute 'hi SpellBad     ' . s:envir . 'bg=' . s:non . ' gui=' . s:unl . ' cterm=' . s:unl
+	execute 'hi SpellCap     ' . s:envir . 'bg=' . s:non . ' gui=' . s:unl . ' cterm=' . s:unl
+	execute 'hi SpellLocal   ' . s:envir . 'bg=' . s:non . ' gui=' . s:unl . ' cterm=' . s:unl
+	execute 'hi SpellRare    ' . s:envir . 'bg=' . s:non . ' gui=' . s:unl . ' cterm=' . s:unl
 endif
 
 " }}}
@@ -597,8 +597,9 @@ execute 'hi vimSetSep '        . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg
 execute 'hi vimParenSep '      . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg=' . s:base1 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi vimCtrlChar '      . s:envir . 'fg=' . s:acv50 . ' ' . s:envir . 'bg=' . s:base1 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi vimContinue '      . s:envir . 'fg=' . s:acv70 . ' ' . s:envir . 'bg=' . s:base1 . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi vimCommentTitle '  . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi vimCommentString ' . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi vimCommentTitle '  . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi vimCommentString ' . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi vimLineComment '   . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 
 augroup vimAtomic
 autocmd!
