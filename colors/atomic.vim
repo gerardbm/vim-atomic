@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic
-"  Version : 3.2.0
+"  Version : 3.2.1
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -491,8 +491,6 @@ execute 'hi ALEErrorSign '   . s:envir . 'fg=' . s:acr50 . ' ' . s:envir . 'bg='
 execute 'hi ALEWarningSign ' . s:envir . 'fg=' . s:aco50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 
 " }}}
-" Plugin specific
-"----------------------------------------------------------------
 " Syntastic: {{{
 
 execute 'hi SyntasticError '        . s:envir . 'fg=' . s:acr70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:bld . ' cterm=' . s:bld
