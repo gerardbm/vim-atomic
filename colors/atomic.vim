@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic
-"  Version : 3.2.2
+"  Version : 3.3.0
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -1168,6 +1168,18 @@ execute 'hi markdownBlockQuote '        . s:envir . 'fg=' . s:acv50 . ' ' . s:en
 " --------------------------------------.
 execute 'hi markdownBold                  gui=' . s:bld . ' cterm=' . s:bld
 execute 'hi markdownItalic                gui=' . s:itl . ' cterm=' . s:itl
+
+" }}}
+" Vimwiki: {{{
+
+execute 'hi VimwikiHeaderChar ' . s:envir . 'fg=' . s:acb50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi VimwikiHeader1 '    . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi VimwikiHeader2 '    . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi VimwikiHeader3 '    . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi VimwikiHeader4 '    . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi VimwikiHeader5 '    . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi VimwikiHeader6 '    . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi VimwikiListTodo '   . s:envir . 'fg=' . s:acg50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 
 " }}}
 
