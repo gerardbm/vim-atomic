@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic
-"  Version : 3.4.1
+"  Version : 3.4.2
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -423,7 +423,7 @@ endif
 
 execute 'hi PMenu '        . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:base3 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi PMenuSel '     . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:acc50 . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi SignColumn '   . s:envir . 'bg=' . s:base3 . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi SignColumn '   . s:envir . 'bg=' . s:base1 . ' gui=' . s:non . ' cterm=' . s:non
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
 	execute 'hi ColorColumn ' . s:envir . 'bg=' . s:base5 . ' gui=' . s:non . ' cterm=' . s:non
