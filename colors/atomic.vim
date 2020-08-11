@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic
-"  Version : 3.5.2
+"  Version : 3.5.3
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -1164,6 +1164,14 @@ execute 'hi markdownIdDeclaration '     . s:envir . 'fg=' . s:acv70 . ' ' . s:en
 execute 'hi markdownBlockQuote '        . s:envir . 'fg=' . s:aco50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi markdownBold          gui=' . s:bld . ' cterm=' . s:bld
 execute 'hi markdownItalic        gui=' . s:itl . ' cterm=' . s:itl
+
+augroup markdownAtomic
+autocmd!
+autocmd ColorScheme atomic
+		\ execute 'hi markdownExt ' . s:envir . 'fg=' . s:acg70 . ' cterm=' . s:itl |
+		\ autocmd Filetype markdown,liquid
+		\ syn match markdownExt /{[.:#][^}]*}/
+augroup END
 
 " }}}
 " Markdown_Plasticboy: {{{
