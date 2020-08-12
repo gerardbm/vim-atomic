@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic
-"  Version : 3.5.3
+"  Version : 4.0.0
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -99,46 +99,26 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 		" -----------------------
 		let s:base3 = '#6B859E' " Luma 50%
 		let s:base4 = '#A6B5C5' " Luma 70%
-
-		"  Extra for GUI
-		let s:base5 = '#193958' " Luma 20% (column)
-		let s:base6 = '#2A3540' " Luma 20% (select)
 	elseif s:mode == 3 || s:mode == 4
 		" Dark cyan
 		" -----------------------
 		let s:base3 = '#5E8F8F' " Luma 50%
 		let s:base4 = '#99BDBD' " Luma 70%
-
-		"  Extra for GUI
-		let s:base5 = '#134040' " Luma 20% (column)
-		let s:base6 = '#253939' " Luma 20% (select)
 	elseif s:mode == 5 || s:mode == 6
 		" Night orange
 		" -----------------------
 		let s:base3 = '#957B62' " Luma 50%
 		let s:base4 = '#C0AF9F' " Luma 70%
-
-		"  Extra for GUI
-		let s:base5 = '#472E15' " Luma 20% (column)
-		let s:base6 = '#3B3127' " Luma 20% (select)
 	elseif s:mode == 7 || s:mode == 8
 		" Night red
 		" -----------------------
 		let s:base3 = '#A27171' " Luma 50%
 		let s:base4 = '#C7A9A9' " Luma 70%
-
-		"  Extra for GUI
-		let s:base5 = '#651D1D' " Luma 20% (column)
-		let s:base6 = '#442C2C' " Luma 20% (select)
 	elseif s:mode == 9 || s:mode == 10
 		" Light mode
 		" -----------------------
 		let s:base3 = '#8D815C' " Luma 50%
 		let s:base4 = '#554D37' " Luma 30%
-
-		"  Extra for GUI
-		let s:base5 = '#E0CE96' " Luma 80% (column)
-		let s:base6 = '#D3CDBB' " Luma 80% (select)
 	endif
 
 	" Accent colors
@@ -364,6 +344,7 @@ execute 'hi StatusLineNC ' . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg=' .
 execute 'hi WildMenu '     . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:acc50 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi VertSplit '    . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi Directory '    . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi SignColumn '   . s:envir . 'bg=' . s:base1 . ' gui=' . s:non . ' cterm=' . s:non
 " -------------------------.
 execute 'hi ModeMsg '      . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi MoreMsg '      . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
@@ -377,12 +358,7 @@ execute 'hi FoldColumn '   . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' .
 
 " }}}
 " Selection: {{{
-
-if (has('termguicolors') && &termguicolors) || has('gui_running')
-	execute 'hi Visual '       . s:envir . 'bg=' . s:base6
-else
-	execute 'hi Visual '       . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:base3
-endif
+execute 'hi Visual '       . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:base3
 
 " }}}
 " Spelling: {{{
@@ -419,17 +395,17 @@ else
 endif
 
 " }}}
-" Cursorline: {{{
+" PMenu: {{{
 
 execute 'hi PMenu '        . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:base3 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi PMenuSel '     . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:acc50 . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi SignColumn '   . s:envir . 'bg=' . s:base1 . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi PMenuSbar '    . s:envir . 'bg=' . s:base4
+execute 'hi PMenuThumb '   . s:envir . 'bg=' . s:acc50
 
-if (has('termguicolors') && &termguicolors) || has('gui_running')
-	execute 'hi ColorColumn ' . s:envir . 'bg=' . s:base5 . ' gui=' . s:non . ' cterm=' . s:non
-else
-	execute 'hi ColorColumn ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:non . ' cterm=' . s:non
-endif
+" }}}
+" Cursorline: {{{
+
+execute 'hi ColorColumn '  . s:envir . 'bg=' . s:base2 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi CursorLineNr ' . s:envir . 'fg=' . s:aco70 . ' ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:bld . ' cterm=' . s:bld
 execute 'hi CursorLine '   . s:envir . 'bg=' . s:base2 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi CursorColumn ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:non . ' cterm=' . s:non
@@ -488,25 +464,25 @@ execute 'hi Title '          . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg='
 "----------------------------------------------------------------
 " ALE: {{{
 
-execute 'hi ALEInfoSign '    . s:envir . 'fg=' . s:acb50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi ALEErrorSign '   . s:envir . 'fg=' . s:acr50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi ALEWarningSign ' . s:envir . 'fg=' . s:aco50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi ALEInfoSign '    . s:envir . 'fg=' . s:acb50
+execute 'hi ALEErrorSign '   . s:envir . 'fg=' . s:acr50
+execute 'hi ALEWarningSign ' . s:envir . 'fg=' . s:aco50
 
 " }}}
 " Syntastic: {{{
 
-execute 'hi SyntasticError '        . s:envir . 'fg=' . s:acr70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:bld . ' cterm=' . s:bld
-execute 'hi SyntasticWarning '      . s:envir . 'fg=' . s:aco70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:bld . ' cterm=' . s:bld
-execute 'hi SyntasticStyleError '   . s:envir . 'fg=' . s:acg70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:bld . ' cterm=' . s:bld
-execute 'hi SyntasticStyleWarning ' . s:envir . 'fg=' . s:acg70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:bld . ' cterm=' . s:bld
+execute 'hi SyntasticError '        . s:envir . 'fg=' . s:acr50
+execute 'hi SyntasticWarning '      . s:envir . 'fg=' . s:aco50
+execute 'hi SyntasticStyleError '   . s:envir . 'fg=' . s:acr70
+execute 'hi SyntasticStyleWarning ' . s:envir . 'fg=' . s:aco70
 
 " }}}
 " Neomake: {{{
 
-execute 'hi NeomakeErrorSign '   . s:envir . 'fg=' . s:acr50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi NeomakeWarningSign ' . s:envir . 'fg=' . s:aco50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi NeomakeMessageSign ' . s:envir . 'fg=' . s:acg50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi NeomakeInfoSign '    . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi NeomakeErrorSign '   . s:envir . 'fg=' . s:acr50
+execute 'hi NeomakeWarningSign ' . s:envir . 'fg=' . s:aco50
+execute 'hi NeomakeMessageSign ' . s:envir . 'fg=' . s:acg50
+execute 'hi NeomakeInfoSign '    . s:envir . 'fg=' . s:acc50
 
 " }}}
 " GitGutter: {{{
@@ -551,6 +527,28 @@ execute 'hi goPredefinedIdentifiers ' . s:envir . 'fg=' . s:aco50 . ' ' . s:envi
 execute 'hi goExtraType '             . s:envir . 'fg=' . s:acv70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi goTypeDecl '              . s:envir . 'fg=' . s:acb50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi goVarARgs '               . s:envir . 'fg=' . s:aco50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+
+" }}}
+" Markdown_Plasticboy: {{{
+
+execute 'hi htmlComment '      . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi mkdHeading '       . s:envir . 'fg=' . s:acb50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi htmlH1 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi htmlH2 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi htmlH3 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi htmlH4 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi htmlH5 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi htmlH6 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi mkdCode '          . s:envir . 'fg=' . s:acc70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi mkdCodeDelimiter ' . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi mkdLink '          . s:envir . 'fg=' . s:acb70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:unl . ' cterm=' . s:unl
+execute 'hi mkdUrl '           . s:envir . 'fg=' . s:acv70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi mkdDelimiter '     . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi mkdListItem '      . s:envir . 'fg=' . s:acg50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi mkdRule '          . s:envir . 'fg=' . s:aco70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi mkdBlockquote '    . s:envir . 'fg=' . s:aco50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi htmlBold     gui=' . s:bld . ' cterm=' . s:bld
+execute 'hi htmlItalic   gui=' . s:itl . ' cterm=' . s:itl
 
 " }}}
 
@@ -1172,28 +1170,6 @@ autocmd ColorScheme atomic
 		\ autocmd Filetype markdown,liquid
 		\ syn match markdownExt /{[.:#][^}]*}/
 augroup END
-
-" }}}
-" Markdown_Plasticboy: {{{
-
-execute 'hi htmlComment '      . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi mkdHeading '       . s:envir . 'fg=' . s:acb50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi htmlH1 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi htmlH2 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi htmlH3 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi htmlH4 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi htmlH5 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi htmlH6 '           . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi mkdCode '          . s:envir . 'fg=' . s:acc70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi mkdCodeDelimiter ' . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi mkdLink '          . s:envir . 'fg=' . s:acb70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:unl . ' cterm=' . s:unl
-execute 'hi mkdUrl '           . s:envir . 'fg=' . s:acv70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi mkdDelimiter '     . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi mkdListItem '      . s:envir . 'fg=' . s:acg50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi mkdRule '          . s:envir . 'fg=' . s:aco70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi mkdBlockquote '    . s:envir . 'fg=' . s:aco50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi htmlBold     gui=' . s:bld . ' cterm=' . s:bld
-execute 'hi htmlItalic   gui=' . s:itl . ' cterm=' . s:itl
 
 " }}}
 " Vimwiki: {{{
