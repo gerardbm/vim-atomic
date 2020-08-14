@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic
-"  Version : 4.0.1
+"  Version : 4.0.2
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -271,6 +271,7 @@ endif
 
 " none
 let s:non = 'NONE'
+let s:rev = 'reverse'
 
 " italic
 if exists('g:atomic_italic')
@@ -397,18 +398,18 @@ endif
 " }}}
 " PMenu: {{{
 
-execute 'hi PMenu '        . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:base3 . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi PMenuSel '     . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:acc50 . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi PMenu '        . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:base1 . ' gui=' . s:non . ' cterm=' . s:rev
+execute 'hi PMenuSel '     . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:base1 . ' gui=' . s:non . ' cterm=' . s:rev
 execute 'hi PMenuSbar '    . s:envir . 'bg=' . s:base4
 execute 'hi PMenuThumb '   . s:envir . 'bg=' . s:acc50
 
 " }}}
-" Cursorline: {{{
+" Cursor: {{{
 
 execute 'hi ColorColumn '  . s:envir . 'bg=' . s:base2 . ' gui=' . s:non . ' cterm=' . s:non
-execute 'hi CursorLineNr ' . s:envir . 'fg=' . s:aco70 . ' ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:bld . ' cterm=' . s:bld
-execute 'hi CursorLine '   . s:envir . 'bg=' . s:base2 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi CursorColumn ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi CursorLine '   . s:envir . 'bg=' . s:base2 . ' gui=' . s:non . ' cterm=' . s:non
+execute 'hi CursorLineNr ' . s:envir . 'fg=' . s:aco70 . ' ' . s:envir . 'bg=' . s:base2 . ' gui=' . s:bld . ' cterm=' . s:bld
 execute 'hi Cursor '       . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:base4 . ' gui=' . s:non . ' cterm=' . s:non
 
 " }}}
