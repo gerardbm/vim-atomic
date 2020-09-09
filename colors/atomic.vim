@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic
-"  Version : 4.0.2
+"  Version : 4.0.3
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -271,6 +271,8 @@ endif
 
 " none
 let s:non = 'NONE'
+
+" reverse
 let s:rev = 'reverse'
 
 " italic
@@ -582,18 +584,6 @@ execute 'hi vimCommentTitle '  . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg
 execute 'hi vimCommentString ' . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi vimLineComment '   . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 
-augroup vimAtomic
-autocmd!
-autocmd ColorScheme atomic
-		\ execute 'hi vimKeywords '  . s:envir . 'fg=' . s:acg70 |
-		\ execute 'hi vimKeywords2 ' . s:envir . 'fg=' . s:acr70 |
-		\ autocmd Filetype vim
-		\ syn keyword vimKeywords if endif
-		\ containedin=vimFuncBody |
-		\ syn keyword vimKeywords2 try catch endtry
-		\ containedin=vimFuncBody
-augroup END
-
 " }}}
 " HTML: {{{
 
@@ -606,15 +596,6 @@ execute 'hi htmlSpecialTagName ' . s:envir . 'fg=' . s:acb50 . ' ' . s:envir . '
 execute 'hi htmlArg '            . s:envir . 'fg=' . s:acb70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi htmlTitle '          . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi htmlSpecialChar '    . s:envir . 'fg=' . s:aco50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-
-augroup htmlAtomic
-autocmd!
-autocmd ColorScheme atomic
-		\ execute 'hi htmlEqual ' . s:envir . 'fg=' . s:base4 |
-		\ autocmd Filetype html,php
-		\ syn match htmlEqual /=/
-		\ containedin=htmlTag
-augroup END
 
 " }}}
 " XML: {{{
@@ -643,15 +624,6 @@ execute 'hi xmlDocType '         . s:envir . 'fg=' . s:acb70 . ' ' . s:envir . '
 execute 'hi xmlDocTypeDecl '     . s:envir . 'fg=' . s:acb50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi xmlDocTypeKeyword '  . s:envir . 'fg=' . s:acb50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi xmlInlineDTD '       . s:envir . 'fg=' . s:acc50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-
-augroup xmlAtomic
-autocmd!
-autocmd ColorScheme atomic
-		\ execute 'hi xmlName ' . s:envir . 'fg=' . s:acb50 |
-		\ autocmd Filetype xml
-		\ syn match xmlName /xml/
-		\ containedin=ALL
-augroup END
 
 " }}}
 " PHP: {{{
@@ -760,15 +732,6 @@ execute 'hi cssMediaProp '          . s:envir . 'fg=' . s:aco70 . ' ' . s:envir 
 execute 'hi cssMediaAttr '          . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi cssComment '            . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 
-augroup cssAtomic
-autocmd!
-autocmd ColorScheme atomic
-		\ execute 'hi VendorPrefix ' . s:envir . 'fg=' . s:aco50 . ' gui=' . s:itl . ' cterm=' . s:itl |
-		\ autocmd Filetype css
-		\ syn match VendorPrefix /-\(moz\|webkit\|o\|ms\)-[a-zA-Z-]\+/
-		\ containedin=ALL
-augroup END
-
 " }}}
 " JavaScript: {{{
 
@@ -875,15 +838,6 @@ execute 'hi cppSpecialCharacter '   . s:envir . 'fg=' . s:acr70 . ' ' . s:envir 
 execute 'hi cppOperator '           . s:envir . 'fg=' . s:acg70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi cppRawString '          . s:envir . 'fg=' . s:acc70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi cppRawStringDelimiter ' . s:envir . 'fg=' . s:acc70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
-
-augroup cAtomic
-autocmd!
-autocmd ColorScheme atomic
-		\ execute 'hi cFunction ' . s:envir . 'fg=' . s:acb70 |
-		\ autocmd Filetype c,cpp
-		\ syn match cFunction "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2 |
-		\ syn match cFunction "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
-augroup END
 
 " }}}
 " Shell/Bash: {{{
@@ -1143,14 +1097,6 @@ execute 'hi markdownBoldDelimiter '     . s:envir . 'fg=' . s:acr50 . ' ' . s:en
 execute 'hi markdownItalicDelimiter '   . s:envir . 'fg=' . s:acv50 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi markdownBold          gui=' . s:bld . ' cterm=' . s:bld
 execute 'hi markdownItalic        gui=' . s:itl . ' cterm=' . s:itl
-
-augroup markdownAtomic
-autocmd!
-autocmd ColorScheme atomic
-		\ execute 'hi markdownExt ' . s:envir . 'fg=' . s:acg70 . ' cterm=' . s:itl |
-		\ autocmd Filetype markdown,liquid
-		\ syn match markdownExt /{[.:#][^}]*}/
-augroup END
 
 " }}}
 " Vimwiki: {{{
