@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic
-"  Version : 4.1.0
+"  Version : 4.2.0
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -460,9 +460,11 @@ execute 'hi Title '          . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg='
 "----------------------------------------------------------------
 " ALE: {{{
 
-execute 'hi ALEInfoSign '    . s:envir . 'fg=' . s:acb50
-execute 'hi ALEErrorSign '   . s:envir . 'fg=' . s:acr50
-execute 'hi ALEWarningSign ' . s:envir . 'fg=' . s:aco50
+execute 'hi ALEInfoSign '                . s:envir . 'fg=' . s:acb50
+execute 'hi ALEErrorSign '               . s:envir . 'fg=' . s:acr50
+execute 'hi ALEWarningSign '             . s:envir . 'fg=' . s:aco50
+execute 'hi ALESignColumnWithErrors '    . s:envir . 'fg=' . s:acr50
+execute 'hi ALESignColumnWithoutErrors ' . s:envir . 'fg=' . s:acg50
 
 " }}}
 " Syntastic: {{{
