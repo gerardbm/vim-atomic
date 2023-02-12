@@ -74,15 +74,15 @@ More info, see `:h xterm-true-color`.
 
 If your terminal have *True color* support or if you are using a GUI (like gvim or nvim-qt), you have the following commands to switch between the different color palettes:
 
-- (1) `AtomicSpaceHC`: sets the space mode (blue hue, dark) in hard contrast (+4%).
-- (2) `AtomicSpaceMC`: sets the space mode (blue hue, dark) in medium contrast (default).
-- (3) `AtomicSpaceLC`: sets the space mode (blue hue, dark) in hard contrast (-4%).
-- (4) `AtomicNightHC`: sets the night mode (orange hue, dark) in hard contrast (+4%).
-- (5) `AtomicNightMC`: sets the night mode (orange hue, dark) in medium contrast (default).
-- (6) `AtomicNightLC`: sets the night mode (orange hue, dark) in hard contrast (-4%).
-- (7) `AtomicLightHC`: sets the light mode (orange hue, bright) in hard contrast (+4%).
-- (8) `AtomicLightMC`: sets the light mode (orange hue, bright) in medium contrast (default).
-- (9) `AtomicLightLC`: sets the light mode (orange hue, bright) in hard contrast (-4%).
+- (1) `AtomicSpaceHC`: sets the space mode (blue hue, dark background) in hard contrast (+4%).
+- (2) `AtomicSpaceMC`: sets the space mode (blue hue, dark background) in medium contrast (default).
+- (3) `AtomicSpaceLC`: sets the space mode (blue hue, dark background) in hard contrast (-4%).
+- (4) `AtomicNightHC`: sets the night mode (orange hue, dark background) in hard contrast (+4%).
+- (5) `AtomicNightMC`: sets the night mode (orange hue, dark background) in medium contrast (default).
+- (6) `AtomicNightLC`: sets the night mode (orange hue, dark background) in hard contrast (-4%).
+- (7) `AtomicLightHC`: sets the light mode (orange hue, light background) in hard contrast (+4%).
+- (8) `AtomicLightMC`: sets the light mode (orange hue, light background) in medium contrast (default).
+- (9) `AtomicLightLC`: sets the light mode (orange hue, light background) in hard contrast (-4%).
 
 Use one of them **after** the color scheme definition in your `~/.vimrc` or `~/.gvimrc`.
 
