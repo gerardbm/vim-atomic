@@ -1,8 +1,16 @@
+# Atomic for Vim/Neovim
+
 Vim-atomic is a dark & light color scheme designed to use on vim, gvim and neovim. It consists of 16 colors selected procedurally (algorithms) and it's part of a bigger project: [Atomic](https://github.com/gerardbm/atomic), which also includes themes and color schemes for terminals (URxvt, XTerm) and some terminal programs (tmux, zsh, irssi, cmus).
+
+![Atomic Space Screenshot](https://github.com/gerardbm/vim-atomic/blob/master/img/Atomic-Space-Screenshot.png)
+
+![Atomic Night Screenshot](https://github.com/gerardbm/vim-atomic/blob/master/img/Atomic-Night-Screenshot.png)
+
+![Atomic Light Screenshot](https://github.com/gerardbm/vim-atomic/blob/master/img/Atomic-Light-Screenshot.png)
 
 Atomic has support for 8, 16 and 256 colors, and *True Color* (24 bits) on the last versions of vim, gvim, neovim and nvim-qt. It uses the setting `termguicolors` properly (some color schemes don't).
 
-It also includes nine modes of color:
+It also includes three modes of color with three contrasts:
 - Space Hard Contrast
 - Space Medium Contrast
 - Space Low Contrast
