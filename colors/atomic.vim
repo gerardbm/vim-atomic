@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic Color Scheme
-"  Version : 5.0.0
+"  Version : 5.0.1
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -100,7 +100,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 		" -----------------------
 		let s:base3 = '#827562' " L* 50%
 		let s:base4 = '#B5A38A' " L* 68%
-	elseif s:mode == 7 || s:mode == 8 || s:mode == 8
+	elseif s:mode == 7 || s:mode == 8 || s:mode == 9
 		" Light
 		" -----------------------
 		let s:base3 = '#4F4537' " L* 30%
@@ -156,9 +156,9 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 				\ | colorscheme atomic
 	command! AtomicNightHC        let g:atomic_mode = 4 | set background=dark
 				\ | colorscheme atomic
-	command! AtomicNightMC     let g:atomic_mode = 5 | set background=dark
+	command! AtomicNightMC        let g:atomic_mode = 5 | set background=dark
 				\ | colorscheme atomic
-	command! AtomicNightLC     let g:atomic_mode = 6 | set background=dark
+	command! AtomicNightLC        let g:atomic_mode = 6 | set background=dark
 				\ | colorscheme atomic
 	command! AtomicLightHC        let g:atomic_mode = 7 | set background=light
 				\ | colorscheme atomic
