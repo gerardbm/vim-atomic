@@ -12,14 +12,20 @@ Vim-atomic is a dark & light color scheme designed to use on vim, gvim and neovi
 
 Atomic has support for 8, 16 and 256 colors, and *True Color* (24 bits) on the last versions of vim, gvim, neovim and nvim-qt. It uses the setting `termguicolors` properly (some color schemes don't).
 
-It also includes 7 modes of color (6 darks and 1 light) with three contrasts:
-- Space mode is dark with blue hue.
-- Onion mode is dark with purple hue.
-- Blood mode is dark with red hue.
-- Night mode is dark with orange hue.
-- Grass mode is dark with green hue.
-- Ocean mode is dark with cyan hue.
-- Light mode is light with orange hue.
+It also includes 7 modes of color (6 darks and 1 light):
+- Space mode is dark with blue hue (240°).
+- Onion mode is dark with purple hue (300°).
+- Blood mode is dark with red hue (0°).
+- Night mode is dark with orange hue (60°).
+- Grass mode is dark with green hue (120°).
+- Ocean mode is dark with cyan hue (180°).
+- Light mode is light with orange hue (60°).
+
+Each mode has 3 contrasts:
+
+- High contrast (HC), +4%
+- Medium contrast (MC), 0
+- Low contrast (LC), -4%
 
 ## Installation
 
