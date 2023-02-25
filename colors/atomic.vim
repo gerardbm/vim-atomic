@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic Color Scheme
-"  Version : 5.0.1
+"  Version : 6.0.0
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -57,31 +57,91 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 		let s:base1 = '#181E24' " L* 11%
 		let s:base2 = '#1E242B' " L* 14%
 	elseif s:mode == 4
+		" Onion HC
+		" -----------------------
+		let s:base1 = '#100911' " L* 3%
+		let s:base2 = '#19101B' " L* 6%
+	elseif s:mode == 5
+		" Onion MC
+		" -----------------------
+		let s:base1 = '#1C121E' " L* 7%
+		let s:base2 = '#231726' " L* 10%
+	elseif s:mode == 6
+		" Onion LC
+		" -----------------------
+		let s:base1 = '#261928' " L* 11%
+		let s:base2 = '#2D1F30' " L* 14%
+	elseif s:mode == 7
+		" Blood HC
+		" -----------------------
+		let s:base1 = '#14080A' " L* 3%
+		let s:base2 = '#1F0F12' " L* 6%
+	elseif s:mode == 8
+		" Blood MC
+		" -----------------------
+		let s:base1 = '#221114' " L* 7%
+		let s:base2 = '#2A161A' " L* 10%
+	elseif s:mode == 9
+		" Blood LC
+		" -----------------------
+		let s:base1 = '#2D171C' " L* 11%
+		let s:base2 = '#351D22' " L* 14%
+	elseif s:mode == 10
 		" Night HC
 		" -----------------------
 		let s:base1 = '#0D0B07' " L* 3%
 		let s:base2 = '#16130E' " L* 6%
-	elseif s:mode == 5
+	elseif s:mode == 11
 		" Night MC
 		" -----------------------
 		let s:base1 = '#181510' " L* 7%
 		let s:base2 = '#1F1B15' " L* 10%
-	elseif s:mode == 6
+	elseif s:mode == 12
 		" Night LC
 		" -----------------------
-		let s:base1 = '#211D17' " L* 10%
+		let s:base1 = '#211D17' " L* 11%
 		let s:base2 = '#28231C' " L* 14%
-	elseif s:mode == 7
+	elseif s:mode == 13
+		" Grass HC
+		" -----------------------
+		let s:base1 = '#080C07' " L* 3%
+		let s:base2 = '#10150E' " L* 6%
+	elseif s:mode == 14
+		" Grass MC
+		" -----------------------
+		let s:base1 = '#121710' " L* 7%
+		let s:base2 = '#171D15' " L* 10%
+	elseif s:mode == 15
+		" Grass LC
+		" -----------------------
+		let s:base1 = '#191F17' " L* 11%
+		let s:base2 = '#1E261C' " L* 14%
+	elseif s:mode == 16
+		" Ocean HC
+		" -----------------------
+		let s:base1 = '#080C0B' " L* 3%
+		let s:base2 = '#0F1414' " L* 6%
+	elseif s:mode == 17
+		" Ocean MC
+		" -----------------------
+		let s:base1 = '#111716' " L* 7%
+		let s:base2 = '#161D1C' " L* 10%
+	elseif s:mode == 18
+		" Ocean LC
+		" -----------------------
+		let s:base1 = '#171F1E' " L* 11%
+		let s:base2 = '#1D2524' " L* 14%
+	elseif s:mode == 19
 		" Light HC
 		" -----------------------
 		let s:base1 = '#FBF6EE' " L* 97%
 		let s:base2 = '#F6EDE0' " L* 94%
-	elseif s:mode == 8
+	elseif s:mode == 20
 		" Light MC
 		" -----------------------
 		let s:base1 = '#F6E9D7' " L* 93%
 		let s:base2 = '#F0E0CA' " L* 90%
-	elseif s:mode == 9
+	elseif s:mode == 21
 		" Light LC
 		" -----------------------
 		let s:base1 = '#F2DDBD' " L* 89%
@@ -96,11 +156,31 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 		let s:base3 = '#67798B' " L* 50%
 		let s:base4 = '#91A8C1' " L* 68%
 	elseif s:mode == 4 || s:mode == 5 || s:mode == 6
+		" Onion
+		" -----------------------
+		let s:base3 = '#906A97' " L* 50%
+		let s:base4 = '#BB9BC2' " L* 68%
+	elseif s:mode == 7 || s:mode == 8 || s:mode == 9
+		" Blood
+		" -----------------------
+		let s:base3 = '#A56572' " L* 50%
+		let s:base4 = '#C69BA2' " L* 68%
+	elseif s:mode == 10 || s:mode == 11 || s:mode == 12
 		" Night
 		" -----------------------
 		let s:base3 = '#827562' " L* 50%
 		let s:base4 = '#B5A38A' " L* 68%
-	elseif s:mode == 7 || s:mode == 8 || s:mode == 9
+	elseif s:mode == 13 || s:mode == 14 || s:mode == 15
+		" Grass
+		" -----------------------
+		let s:base3 = '#687D62' " L* 50%
+		let s:base4 = '#92AE89' " L* 68%
+	elseif s:mode == 16 || s:mode == 17 || s:mode == 18
+		" Ocean
+		" -----------------------
+		let s:base3 = '#657C78' " L* 50%
+		let s:base4 = '#8DACA8' " L* 68%
+	elseif s:mode == 19 || s:mode == 20 || s:mode == 21
 		" Light
 		" -----------------------
 		let s:base3 = '#4F4537' " L* 30%
@@ -109,7 +189,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 
 	" Accent colors
 	" -----------------------
-	if s:mode >= 1 && s:mode <= 6
+	if s:mode >= 1 && s:mode <= 18
 		" Dark background
 		" -----------------------
 		" Dark accent colors
@@ -154,17 +234,47 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 				\ | colorscheme atomic
 	command! AtomicSpaceLC        let g:atomic_mode = 3 | set background=dark
 				\ | colorscheme atomic
-	command! AtomicNightHC        let g:atomic_mode = 4 | set background=dark
+
+	command! AtomicOnionHC        let g:atomic_mode = 4 | set background=dark
 				\ | colorscheme atomic
-	command! AtomicNightMC        let g:atomic_mode = 5 | set background=dark
+	command! AtomicOnionMC        let g:atomic_mode = 5 | set background=dark
 				\ | colorscheme atomic
-	command! AtomicNightLC        let g:atomic_mode = 6 | set background=dark
+	command! AtomicOnionLC        let g:atomic_mode = 6 | set background=dark
 				\ | colorscheme atomic
-	command! AtomicLightHC        let g:atomic_mode = 7 | set background=light
+
+	command! AtomicBloodHC        let g:atomic_mode = 7 | set background=dark
 				\ | colorscheme atomic
-	command! AtomicLightMC        let g:atomic_mode = 8 | set background=light
+	command! AtomicBloodMC        let g:atomic_mode = 8 | set background=dark
 				\ | colorscheme atomic
-	command! AtomicLightLC        let g:atomic_mode = 9 | set background=light
+	command! AtomicBloodLC        let g:atomic_mode = 9 | set background=dark
+				\ | colorscheme atomic
+
+	command! AtomicNightHC        let g:atomic_mode = 10 | set background=dark
+				\ | colorscheme atomic
+	command! AtomicNightMC        let g:atomic_mode = 11 | set background=dark
+				\ | colorscheme atomic
+	command! AtomicNightLC        let g:atomic_mode = 12 | set background=dark
+				\ | colorscheme atomic
+
+	command! AtomicGrassHC        let g:atomic_mode = 13 | set background=dark
+				\ | colorscheme atomic
+	command! AtomicGrassMC        let g:atomic_mode = 14 | set background=dark
+				\ | colorscheme atomic
+	command! AtomicGrassLC        let g:atomic_mode = 15 | set background=dark
+				\ | colorscheme atomic
+
+	command! AtomicOceanHC        let g:atomic_mode = 16 | set background=dark
+				\ | colorscheme atomic
+	command! AtomicOceanMC        let g:atomic_mode = 17 | set background=dark
+				\ | colorscheme atomic
+	command! AtomicOceanLC        let g:atomic_mode = 18 | set background=dark
+				\ | colorscheme atomic
+
+	command! AtomicLightHC        let g:atomic_mode = 19 | set background=light
+				\ | colorscheme atomic
+	command! AtomicLightMC        let g:atomic_mode = 20 | set background=light
+				\ | colorscheme atomic
+	command! AtomicLightLC        let g:atomic_mode = 21 | set background=light
 				\ | colorscheme atomic
 
 	function! CycleModes()
@@ -187,6 +297,30 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 		elseif s:cycle == 8
 			let g:atomic_mode = 9
 		elseif s:cycle == 9
+			let g:atomic_mode = 10
+		elseif s:cycle == 10
+			let g:atomic_mode = 11
+		elseif s:cycle == 11
+			let g:atomic_mode = 12
+		elseif s:cycle == 12
+			let g:atomic_mode = 13
+		elseif s:cycle == 13
+			let g:atomic_mode = 14
+		elseif s:cycle == 14
+			let g:atomic_mode = 15
+		elseif s:cycle == 15
+			let g:atomic_mode = 16
+		elseif s:cycle == 16
+			let g:atomic_mode = 17
+		elseif s:cycle == 17
+			let g:atomic_mode = 18
+		elseif s:cycle == 18
+			let g:atomic_mode = 19
+		elseif s:cycle == 19
+			let g:atomic_mode = 20
+		elseif s:cycle == 20
+			let g:atomic_mode = 21
+		elseif s:cycle == 21
 			let g:atomic_mode = 1
 		endif
 	endfunction
