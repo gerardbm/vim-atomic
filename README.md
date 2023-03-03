@@ -23,9 +23,9 @@ It also includes 7 modes of color (6 darks and 1 light):
 
 Each mode has 3 contrasts:
 
-- High contrast (HC), +4%
+- High contrast (HC), +3%
 - Medium contrast (MC), 0
-- Low contrast (LC), -4%
+- Low contrast (LC), -3%
 
 ## Installation
 
@@ -88,27 +88,27 @@ More info, see `:h xterm-true-color`.
 
 If your terminal have *True color* support or if you are using a GUI (like gvim or nvim-qt), you have the following commands to switch between the different color palettes:
 
-- (1) `AtomicSpaceHC`: sets the space mode (blue hue, dark background) in hard contrast (+4%).
+- (1) `AtomicSpaceHC`: sets the space mode (blue hue, dark background) in hard contrast (+3%).
 - (2) `AtomicSpaceMC`: sets the space mode (blue hue, dark background) in medium contrast (default).
-- (3) `AtomicSpaceLC`: sets the space mode (blue hue, dark background) in hard contrast (-4%).
-- (4) `AtomicOnionHC`: sets the onion mode (purple hue, dark background) in hard contrast (+4%).
+- (3) `AtomicSpaceLC`: sets the space mode (blue hue, dark background) in hard contrast (-3%).
+- (4) `AtomicOnionHC`: sets the onion mode (purple hue, dark background) in hard contrast (+3%).
 - (5) `AtomicOnionMC`: sets the onion mode (purple hue, dark background) in medium contrast (default).
-- (6) `AtomicOnionLC`: sets the onion mode (purple hue, dark background) in hard contrast (-4%).
-- (7) `AtomicBloodHC`: sets the blood mode (red hue, dark background) in hard contrast (+4%).
+- (6) `AtomicOnionLC`: sets the onion mode (purple hue, dark background) in hard contrast (-3%).
+- (7) `AtomicBloodHC`: sets the blood mode (red hue, dark background) in hard contrast (+3%).
 - (8) `AtomicBloodMC`: sets the blood mode (red hue, dark background) in medium contrast (default).
-- (9) `AtomicBloodLC`: sets the blood mode (red hue, dark background) in hard contrast (-4%).
-- (10) `AtomicNightHC`: sets the night mode (orange hue, dark background) in hard contrast (+4%).
+- (9) `AtomicBloodLC`: sets the blood mode (red hue, dark background) in hard contrast (-3%).
+- (10) `AtomicNightHC`: sets the night mode (orange hue, dark background) in hard contrast (+3%).
 - (11) `AtomicNightMC`: sets the night mode (orange hue, dark background) in medium contrast (default).
-- (12) `AtomicNightLC`: sets the night mode (orange hue, dark background) in hard contrast (-4%).
-- (13) `AtomicGrassHC`: sets the grass mode (green hue, dark background) in hard contrast (+4%).
+- (12) `AtomicNightLC`: sets the night mode (orange hue, dark background) in hard contrast (-3%).
+- (13) `AtomicGrassHC`: sets the grass mode (green hue, dark background) in hard contrast (+3%).
 - (14) `AtomicGrassMC`: sets the grass mode (green hue, dark background) in medium contrast (default).
-- (15) `AtomicGrassLC`: sets the grass mode (green hue, dark background) in hard contrast (-4%).
-- (16) `AtomicOceanHC`: sets the ocean mode (cyan hue, dark background) in hard contrast (+4%).
+- (15) `AtomicGrassLC`: sets the grass mode (green hue, dark background) in hard contrast (-3%).
+- (16) `AtomicOceanHC`: sets the ocean mode (cyan hue, dark background) in hard contrast (+3%).
 - (17) `AtomicOceanMC`: sets the ocean mode (cyan hue, dark background) in medium contrast (default).
-- (18) `AtomicOceanLC`: sets the ocean mode (cyan hue, dark background) in hard contrast (-4%).
-- (19) `AtomicLightHC`: sets the light mode (orange hue, light background) in hard contrast (+4%).
+- (18) `AtomicOceanLC`: sets the ocean mode (cyan hue, dark background) in hard contrast (-3%).
+- (19) `AtomicLightHC`: sets the light mode (orange hue, light background) in hard contrast (+3%).
 - (20) `AtomicLightMC`: sets the light mode (orange hue, light background) in medium contrast (default).
-- (21) `AtomicLightLC`: sets the light mode (orange hue, light background) in hard contrast (-4%).
+- (21) `AtomicLightLC`: sets the light mode (orange hue, light background) in hard contrast (-3%).
 
 Use one of them **after** the color scheme definition in your `~/.vimrc` or `~/.gvimrc`.
 
