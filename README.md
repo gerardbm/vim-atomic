@@ -124,7 +124,7 @@ function! AtomicSwitcher()
 endfunction
 ```
 
-Alternatively, you can cycle them (from 1 to 9) with a shortcut (for example: <kbd>Shift</kbd>+<kbd>F9</kbd>). Paste this in your `~/.vimrc` or `~/.gvimrc`:
+Alternatively, you can cycle them (from 1 to 21) with a shortcut (for example: <kbd>Shift</kbd>+<kbd>F9</kbd>). Paste this in your `~/.vimrc` or `~/.gvimrc`:
 
 ```viml
 nnoremap <S-F9> :call CycleModes()<CR>:colorscheme atomic<CR>
