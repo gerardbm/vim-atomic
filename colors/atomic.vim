@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic Color Scheme
-"  Version : 6.0.0
+"  Version : 6.1.0
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -45,107 +45,107 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 		" Space HC
 		" -----------------------
 		let s:base1 = '#080B0F' " L* 3%
-		let s:base2 = '#0F1418' " L* 6%
+		let s:base2 = '#0F1419' " L* 6%
 	elseif s:mode == 2
 		" Space MC
 		" -----------------------
-		let s:base1 = '#11161B' " L* 7%
-		let s:base2 = '#171C22' " L* 10%
+		let s:base1 = '#0F1419' " L* 6%
+		let s:base2 = '#141A20' " L* 9%
 	elseif s:mode == 3
 		" Space LC
 		" -----------------------
-		let s:base1 = '#181E24' " L* 11%
-		let s:base2 = '#1E242B' " L* 14%
+		let s:base1 = '#141A20' " L* 9%
+		let s:base2 = '#192027' " L* 12%
 	elseif s:mode == 4
 		" Onion HC
 		" -----------------------
 		let s:base1 = '#100911' " L* 3%
-		let s:base2 = '#19101B' " L* 6%
+		let s:base2 = '#1A0F1C' " L* 6%
 	elseif s:mode == 5
 		" Onion MC
 		" -----------------------
-		let s:base1 = '#1C121E' " L* 7%
-		let s:base2 = '#231726' " L* 10%
+		let s:base1 = '#1A0F1C' " L* 6%
+		let s:base2 = '#221524' " L* 9%
 	elseif s:mode == 6
 		" Onion LC
 		" -----------------------
-		let s:base1 = '#261928' " L* 11%
-		let s:base2 = '#2D1F30' " L* 14%
+		let s:base1 = '#221524' " L* 9%
+		let s:base2 = '#291A2C' " L* 12%
 	elseif s:mode == 7
 		" Blood HC
 		" -----------------------
-		let s:base1 = '#14080A' " L* 3%
-		let s:base2 = '#1F0F12' " L* 6%
+		let s:base1 = '#14070A' " L* 3%
+		let s:base2 = '#200E12' " L* 6%
 	elseif s:mode == 8
 		" Blood MC
 		" -----------------------
-		let s:base1 = '#221114' " L* 7%
-		let s:base2 = '#2A161A' " L* 10%
+		let s:base1 = '#200E12' " L* 6%
+		let s:base2 = '#291318' " L* 9%
 	elseif s:mode == 9
 		" Blood LC
 		" -----------------------
-		let s:base1 = '#2D171C' " L* 11%
-		let s:base2 = '#351D22' " L* 14%
+		let s:base1 = '#291318' " L* 9%
+		let s:base2 = '#31181D' " L* 12%
 	elseif s:mode == 10
 		" Night HC
 		" -----------------------
 		let s:base1 = '#0D0B07' " L* 3%
-		let s:base2 = '#16130E' " L* 6%
+		let s:base2 = '#16130D' " L* 6%
 	elseif s:mode == 11
 		" Night MC
 		" -----------------------
-		let s:base1 = '#181510' " L* 7%
-		let s:base2 = '#1F1B15' " L* 10%
+		let s:base1 = '#16130D' " L* 6%
+		let s:base2 = '#1D1912' " L* 9%
 	elseif s:mode == 12
 		" Night LC
 		" -----------------------
-		let s:base1 = '#211D17' " L* 11%
-		let s:base2 = '#28231C' " L* 14%
+		let s:base1 = '#1D1912' " L* 9%
+		let s:base2 = '#241F17' " L* 12%
 	elseif s:mode == 13
 		" Grass HC
 		" -----------------------
 		let s:base1 = '#080C07' " L* 3%
-		let s:base2 = '#10150E' " L* 6%
+		let s:base2 = '#0F150D' " L* 6%
 	elseif s:mode == 14
 		" Grass MC
 		" -----------------------
-		let s:base1 = '#121710' " L* 7%
-		let s:base2 = '#171D15' " L* 10%
+		let s:base1 = '#0F150D' " L* 6%
+		let s:base2 = '#141B12' " L* 9%
 	elseif s:mode == 15
 		" Grass LC
 		" -----------------------
-		let s:base1 = '#191F17' " L* 11%
-		let s:base2 = '#1E261C' " L* 14%
+		let s:base1 = '#141B12' " L* 9%
+		let s:base2 = '#1A2217' " L* 12%
 	elseif s:mode == 16
 		" Ocean HC
 		" -----------------------
-		let s:base1 = '#080C0B' " L* 3%
-		let s:base2 = '#0F1414' " L* 6%
+		let s:base1 = '#070C0B' " L* 3%
+		let s:base2 = '#0E1514' " L* 6%
 	elseif s:mode == 17
 		" Ocean MC
 		" -----------------------
-		let s:base1 = '#111716' " L* 7%
-		let s:base2 = '#161D1C' " L* 10%
+		let s:base1 = '#0E1514' " L* 6%
+		let s:base2 = '#131B1A' " L* 9%
 	elseif s:mode == 18
 		" Ocean LC
 		" -----------------------
-		let s:base1 = '#171F1E' " L* 11%
-		let s:base2 = '#1D2524' " L* 14%
+		let s:base1 = '#131B1A' " L* 9%
+		let s:base2 = '#182120' " L* 12%
 	elseif s:mode == 19
 		" Light HC
 		" -----------------------
-		let s:base1 = '#FBF6EE' " L* 97%
-		let s:base2 = '#F6EDE0' " L* 94%
+		let s:base1 = '#FCF5EC' " L* 97%
+		let s:base2 = '#FBEFDF' " L* 95%
 	elseif s:mode == 20
 		" Light MC
 		" -----------------------
-		let s:base1 = '#F6E9D7' " L* 93%
-		let s:base2 = '#F0E0CA' " L* 90%
+		let s:base1 = '#FAECD8' " L* 94%
+		let s:base2 = '#F9E6CA' " L* 92%
 	elseif s:mode == 21
 		" Light LC
 		" -----------------------
-		let s:base1 = '#F2DDBD' " L* 89%
-		let s:base2 = '#EBD4B1' " L* 86%
+		let s:base1 = '#F8E2C3' " L* 91%
+		let s:base2 = '#F7DCB3' " L* 89%
 	endif
 
 	" Base colors 3 & 4
@@ -153,38 +153,38 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 	if s:mode == 1 || s:mode == 2 || s:mode == 3
 		" Space
 		" -----------------------
-		let s:base3 = '#67798B' " L* 50%
-		let s:base4 = '#91A8C1' " L* 68%
+		let s:base3 = '#6C7885' " L* 50%
+		let s:base4 = '#A3ACB7' " L* 70%
 	elseif s:mode == 4 || s:mode == 5 || s:mode == 6
 		" Onion
 		" -----------------------
-		let s:base3 = '#906A97' " L* 50%
-		let s:base4 = '#BB9BC2' " L* 68%
+		let s:base3 = '#886E8E' " L* 50%
+		let s:base4 = '#B4A7B7' " L* 70%
 	elseif s:mode == 7 || s:mode == 8 || s:mode == 9
 		" Blood
 		" -----------------------
-		let s:base3 = '#A56572' " L* 50%
-		let s:base4 = '#C69BA2' " L* 68%
+		let s:base3 = '#996A73' " L* 50%
+		let s:base4 = '#B9A7AA' " L* 70%
 	elseif s:mode == 10 || s:mode == 11 || s:mode == 12
 		" Night
 		" -----------------------
-		let s:base3 = '#827562' " L* 50%
-		let s:base4 = '#B5A38A' " L* 68%
+		let s:base3 = '#7F7669' " L* 50%
+		let s:base4 = '#B2AA9F' " L* 70%
 	elseif s:mode == 13 || s:mode == 14 || s:mode == 15
 		" Grass
 		" -----------------------
-		let s:base3 = '#687D62' " L* 50%
-		let s:base4 = '#92AE89' " L* 68%
+		let s:base3 = '#6D7B68' " L* 50%
+		let s:base4 = '#A2AF9F' " L* 70%
 	elseif s:mode == 16 || s:mode == 17 || s:mode == 18
 		" Ocean
 		" -----------------------
-		let s:base3 = '#657C78' " L* 50%
-		let s:base4 = '#8DACA8' " L* 68%
+		let s:base3 = '#6A7A78' " L* 50%
+		let s:base4 = '#A1AEAC' " L* 70%
 	elseif s:mode == 19 || s:mode == 20 || s:mode == 21
 		" Light
 		" -----------------------
-		let s:base3 = '#4F4537' " L* 30%
-		let s:base4 = '#84755E' " L* 50%
+		let s:base3 = '#4D463B' " L* 30%
+		let s:base4 = '#867558' " L* 50%
 	endif
 
 	" Accent colors
@@ -193,20 +193,20 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 		" Dark background
 		" -----------------------
 		" Dark accent colors
-		let s:acb50 = '#00A7F0' " |
-		let s:acv50 = '#EA65FF' " |
-		let s:acr50 = '#FF6C91' " | L* 65%
-		let s:aco50 = '#C59700' " |
-		let s:acg50 = '#55B300' " |
-		let s:acc50 = '#00B1A4' " |
+		let s:acb50 = '#27A7EC' " |
+		let s:acv50 = '#E66AFA' " |
+		let s:acr50 = '#FB6F92' " | L* 65%
+		let s:aco50 = '#C39720' " |
+		let s:acg50 = '#5AB220' " |
+		let s:acc50 = '#23B0A3' " |
 
 		" Light accent colors
-		let s:acb70 = '#6CACDF' " |
-		let s:acv70 = '#D38CE0' " |
-		let s:acr70 = '#E58C9F' " | L* 68%
-		let s:aco70 = '#C3A161' " |
-		let s:acg70 = '#78B560' " |
-		let s:acc70 = '#66B3AA' " |
+		let s:acb70 = '#6FB1E7' " |
+		let s:acv70 = '#D991E6' " |
+		let s:acr70 = '#EA92A4' " | L* 70%
+		let s:aco70 = '#CBA65D' " |
+		let s:acg70 = '#78BC5C' " |
+		let s:acc70 = '#62BAB0' " |
 	else
 		" Light background
 		" -----------------------
@@ -222,7 +222,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 		let s:acb70 = '#007EB7' " |
 		let s:acv70 = '#CD00E2' " |
 		let s:acr70 = '#EA0064' " | L* 50%
-		let s:aco70 = '#957200' " | (instead of 68%)
+		let s:aco70 = '#957200' " | (instead of 70%)
 		let s:acg70 = '#3F8700' " |
 		let s:acc70 = '#00867C' " |
 	endif
