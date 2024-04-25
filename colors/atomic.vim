@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic Color Scheme
-"  Version : 6.1.1
+"  Version : 6.1.2
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -437,7 +437,7 @@ execute 'hi NonText '      . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' .
 execute 'hi SpecialKey '   . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 " -------------------------.
 execute 'hi Search '       . s:envir . 'fg=' . s:acr70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:bld . ' cterm=' . s:bld
-execute 'hi MatchParen '                                     . s:envir . 'bg=' . s:non . ' gui=' . s:bld . ' cterm=' . s:bld
+execute 'hi MatchParen '   . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:aco70 . ' gui=' . s:bld . ' cterm=' . s:bld
 " -------------------------.
 execute 'hi TabLine '      . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:base3 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi TabLineSel '   . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:acc50 . ' gui=' . s:non . ' cterm=' . s:non
