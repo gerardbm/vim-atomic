@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic Color Scheme
-"  Version : 6.1.2
+"  Version : 6.2.0
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -425,6 +425,21 @@ if g:atomic_undercurl == 0
 	let s:unc = 'NONE'
 endif
 
+" matchparen
+if exists('g:atomic_matchparen')
+	let g:atomic_matchparen = g:atomic_matchparen
+else
+	let g:atomic_matchparen = 1
+endif
+
+if g:atomic_matchparen == 0
+	let s:mpb = 'NONE'
+	let s:mpf = s:aco50
+else
+	let s:mpb = s:aco50
+	let s:mpf = s:base1
+endif
+
 " }}}
 
 " Colorscheme
@@ -437,7 +452,7 @@ execute 'hi NonText '      . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' .
 execute 'hi SpecialKey '   . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:non . ' cterm=' . s:non
 " -------------------------.
 execute 'hi Search '       . s:envir . 'fg=' . s:acr70 . ' ' . s:envir . 'bg=' . s:non . ' gui=' . s:bld . ' cterm=' . s:bld
-execute 'hi MatchParen '   . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:aco70 . ' gui=' . s:bld . ' cterm=' . s:bld
+execute 'hi MatchParen '   . s:envir . 'fg=' . s:mpf . ' ' . s:envir . 'bg=' . s:mpb . ' gui=' . s:bld . ' cterm=' . s:bld
 " -------------------------.
 execute 'hi TabLine '      . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:base3 . ' gui=' . s:non . ' cterm=' . s:non
 execute 'hi TabLineSel '   . s:envir . 'fg=' . s:base1 . ' ' . s:envir . 'bg=' . s:acc50 . ' gui=' . s:non . ' cterm=' . s:non

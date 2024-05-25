@@ -144,6 +144,16 @@ let g:atomic_undercurl = 0
 
 If this options are not defined, default value is 1 for all of them.
 
+#### MatchParen highlight
+
+By default, Atomic will use an orange color to highlight the background for `MatchParen`. To use the orange color for the foreground instead, use the following option:
+
+```viml
+let g:atomic_matchparen = 0
+```
+
+As with emphasis cases, add this to your `~/.vimrc`, **before** the color scheme definition.
+
 #### Example configuration
 
 ```viml
