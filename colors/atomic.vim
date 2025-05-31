@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic Color Scheme
-"  Version : 7.0.0
+"  Version : 7.0.1
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -188,8 +188,8 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 	elseif s:mode == 19 || s:mode == 20 || s:mode == 21 || s:mode == 22
 		" Light
 		" -----------------------
-		let s:base3 = '#403A37' " L* 25%
-		let s:base4 = '#716359' " L* 43%
+		let s:base3 = '#716359' " L* 43%
+		let s:base4 = '#403A37' " L* 25%
 	endif
 
 	" Accent colors
