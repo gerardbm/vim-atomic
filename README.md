@@ -2,24 +2,24 @@
 
 Vim-atomic is a dark & light color scheme designed to use on vim, gvim and neovim. It consists of 16 colors selected procedurally (algorithms) and it's part of a bigger project: [Atomic](https://github.com/gerardbm/atomic), which also includes themes and color schemes for terminals (URxvt, XTerm) and some terminal programs (tmux, zsh, irssi, cmus).
 
-![Atomic Space Screenshot](https://github.com/gerardbm/vim-atomic/blob/master/img/Atomic-Space-Screenshot.png)
+![Atomic Space Screenshot](https://github.com/gerardbm/vim-atomic/blob/master/img/Atomic-Space-Screenshot_v3.png)
 
-![Atomic Night Screenshot](https://github.com/gerardbm/vim-atomic/blob/master/img/Atomic-Night-Screenshot.png)
+![Atomic Night Screenshot](https://github.com/gerardbm/vim-atomic/blob/master/img/Atomic-Night-Screenshot_v3.png)
 
-![Atomic Light Screenshot](https://github.com/gerardbm/vim-atomic/blob/master/img/Atomic-Light-Screenshot.png)
+![Atomic Light Screenshot](https://github.com/gerardbm/vim-atomic/blob/master/img/Atomic-Light-Screenshot_v3.png)
 
-![Testing dark modes in vim](https://github.com/gerardbm/vim-atomic/blob/master/img/vim.png)
+![Atomic Old Book Screenshot](https://github.com/gerardbm/vim-atomic/blob/master/img/Atomic-Old-Book-Screenshot_v3.png)
 
 Atomic has support for 8, 16 and 256 colors, and *True Color* (24 bits) on the last versions of vim, gvim, neovim and nvim-qt. It uses the setting `termguicolors` properly (some color schemes don't).
 
 It also includes 7 modes of color (6 darks and 1 light):
-- Space mode is dark with blue hue (240°).
-- Onion mode is dark with purple hue (300°).
-- Blood mode is dark with red hue (0°).
-- Night mode is dark with orange hue (60°).
-- Grass mode is dark with green hue (120°).
-- Ocean mode is dark with cyan hue (180°).
-- Light mode is light with orange hue (60°).
+- Space mode is dark with blue hue (251°).
+- Onion mode is dark with purple hue (293°).
+- Blood mode is dark with red hue (10°).
+- Night mode is dark with orange hue (45°).
+- Grass mode is dark with green hue (110°).
+- Ocean mode is dark with cyan hue (182°).
+- Light mode is light with orange hue (45°).
 
 Each mode has 3 contrasts:
 
@@ -109,6 +109,7 @@ If your terminal have *True color* support or if you are using a GUI (like gvim 
 - (19) `AtomicLightHC`: sets the light mode (orange hue, light background) in hard contrast (+3%).
 - (20) `AtomicLightMC`: sets the light mode (orange hue, light background) in medium contrast (default).
 - (21) `AtomicLightLC`: sets the light mode (orange hue, light background) in hard contrast (-3%).
+- (22) `AtomicOldBook`: sets the light mode (orange hue, sepia background) in hard contrast (+2%).
 
 Use one of them **after** the color scheme definition in your `~/.vimrc` or `~/.gvimrc`.
 
