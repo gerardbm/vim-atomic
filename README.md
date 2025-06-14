@@ -11,12 +11,12 @@ Vim-atomic is a dark & light color scheme designed to use on vim, gvim and neovi
 Atomic has support for 8, 16 and 256 colors, and *True Color* (24 bits) on the last versions of vim, gvim, neovim and nvim-qt. It uses the setting `termguicolors` properly (some color schemes don't).
 
 It also includes 7 modes of color (6 darks and 1 light):
-- Space mode is dark with blue hue (260°).
+- Space mode is dark with teal hue (260°).
 - Onion mode is dark with purple hue (293°).
 - Blood mode is dark with red hue (10°).
 - Night mode is dark with orange hue (55°).
 - Grass mode is dark with green hue (110°).
-- Ocean mode is dark with cyan hue (222°).
+- Ocean mode is dark with blue hue (222°).
 - Light mode is light with orange hue (55°).
 
 Each mode has 3 contrasts:
@@ -86,9 +86,9 @@ More info, see `:h xterm-true-color`.
 
 If your terminal have *True color* support or if you are using a GUI (like gvim or nvim-qt), you have the following commands to switch between the different color palettes:
 
-- (1) `AtomicSpaceHC`: sets the space mode (cyan hue, dark background) in high contrast (+3%).
-- (2) `AtomicSpaceMC`: sets the space mode (cyan hue, dark background) in medium contrast (default).
-- (3) `AtomicSpaceLC`: sets the space mode (cyan hue, dark background) in soft contrast (-3%).
+- (1) `AtomicSpaceHC`: sets the space mode (teal hue, dark background) in high contrast (+3%).
+- (2) `AtomicSpaceMC`: sets the space mode (teal hue, dark background) in medium contrast (default).
+- (3) `AtomicSpaceLC`: sets the space mode (teal hue, dark background) in soft contrast (-3%).
 - (4) `AtomicOnionHC`: sets the onion mode (purple hue, dark background) in high contrast (+3%).
 - (5) `AtomicOnionMC`: sets the onion mode (purple hue, dark background) in medium contrast (default).
 - (6) `AtomicOnionLC`: sets the onion mode (purple hue, dark background) in soft contrast (-3%).
