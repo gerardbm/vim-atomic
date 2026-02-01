@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic Color Scheme
-"  Version : 7.3.0
+"  Version : 7.4.0
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -580,6 +580,22 @@ execute 'hi Title '          . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg='
 
 " Plugin specific
 "----------------------------------------------------------------
+" Coc.nvim: {{{
+
+execute 'hi CocErrorSign '     . s:envir . 'fg=' . s:acr50
+execute 'hi CocWarningSign '   . s:envir . 'fg=' . s:aco50
+execute 'hi CocInfoSign '      . s:envir . 'fg=' . s:acb50
+execute 'hi CocHintSign '      . s:envir . 'fg=' . s:acv50
+execute 'hi CocFloating '      . s:envir . 'bg=' . s:base1
+execute 'hi CocFloatBorder '   . s:envir . 'fg=' . s:acc50
+execute 'hi CocMenuSel '       . s:envir . 'bg=' . s:base2
+execute 'hi CocFloatSbar '     . s:envir . 'bg=' . s:base2
+execute 'hi CocFloatThumb '    . s:envir . 'bg=' . s:base3
+execute 'hi CocMenuSbar '      . s:envir . 'bg=' . s:base2
+execute 'hi CocMenuThumb '     . s:envir . 'bg=' . s:base3
+execute 'hi CocSnippetVisual ' . s:envir . 'fg=' . s:base1
+
+" }}}
 " ALE: {{{
 
 execute 'hi ALEInfoSign '                . s:envir . 'fg=' . s:acb50
