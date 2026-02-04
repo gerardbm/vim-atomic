@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic Color Scheme
-"  Version : 7.4.1
+"  Version : 7.4.2
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/vim-atomic
@@ -582,19 +582,35 @@ execute 'hi Title '          . s:envir . 'fg=' . s:base4 . ' ' . s:envir . 'bg='
 "----------------------------------------------------------------
 " Coc.nvim: {{{
 
-execute 'hi CocErrorSign '     . s:envir . 'fg=' . s:acr50
-execute 'hi CocWarningSign '   . s:envir . 'fg=' . s:aco50
-execute 'hi CocInfoSign '      . s:envir . 'fg=' . s:acb50
-execute 'hi CocHintSign '      . s:envir . 'fg=' . s:acv50
-execute 'hi CocFloating '      . s:envir . 'bg=' . s:base1
-execute 'hi CocFloatBorder '   . s:envir . 'fg=' . s:acc50
-execute 'hi CocMenuSel '       . s:envir . 'bg=' . s:base2
-execute 'hi CocFloatSbar '     . s:envir . 'bg=' . s:base2
-execute 'hi CocFloatThumb '    . s:envir . 'bg=' . s:base3
-execute 'hi CocMenuSbar '      . s:envir . 'bg=' . s:base2
-execute 'hi CocMenuThumb '     . s:envir . 'bg=' . s:base3
-execute 'hi CocSnippetVisual ' . s:envir . 'fg=' . s:base1
-execute 'hi CocSearch '        . s:envir . 'fg=' . s:aco50
+execute 'hi CocErrorSign '          . s:envir . 'fg=' . s:acr50
+execute 'hi CocWarningSign '        . s:envir . 'fg=' . s:aco50
+execute 'hi CocInfoSign '           . s:envir . 'fg=' . s:acb50
+execute 'hi CocHintSign '           . s:envir . 'fg=' . s:acv50
+" ----------------------------------.
+execute 'hi CocFloating '           . s:envir . 'bg=' . s:base1
+execute 'hi CocFloatBorder '        . s:envir . 'fg=' . s:acc50
+execute 'hi CocFloatSbar '          . s:envir . 'bg=' . s:base2
+execute 'hi CocFloatThumb '         . s:envir . 'bg=' . s:acc50
+execute 'hi CocMenuSel '            . s:envir . 'bg=' . s:base2 . ' gui=' . s:bld . ' cterm=' . s:bld
+execute 'hi CocMenuSbar '           . s:envir . 'bg=' . s:base4
+execute 'hi CocMenuThumb '          . s:envir . 'bg=' . s:acc50
+execute 'hi CocSnippetVisual '      . s:envir . 'fg=' . s:base1
+execute 'hi CocSearch '             . s:envir . 'fg=' . s:aco50
+execute 'hi CocListLine '           . s:envir . 'fg=' . s:aco50
+" ----------------------------------.
+execute 'hi CocErrorHighlight '     . s:envir . 'fg=' . s:acr50 . ' ' . s:envir . 'bg=' . s:base1 . ' gui=' . s:itl . ' cterm=' . s:itl
+execute 'hi CocWarningHighlight '   . s:envir . 'fg=' . s:aco50 . ' ' . s:envir . 'bg=' . s:base1 . ' gui=' . s:itl . ' cterm=' . s:itl
+execute 'hi CocInfoHighlight '      . s:envir . 'fg=' . s:acb50 . ' ' . s:envir . 'bg=' . s:base1 . ' gui=' . s:itl . ' cterm=' . s:itl
+execute 'hi CocHintHighlight '      . s:envir . 'fg=' . s:acv50 . ' ' . s:envir . 'bg=' . s:base1 . ' gui=' . s:itl . ' cterm=' . s:itl
+" ----------------------------------.
+execute 'hi CocErrorVirtualText '   . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non   . ' gui=' . s:itl . ' cterm=' . s:itl
+execute 'hi CocWarningVirtualText ' . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non   . ' gui=' . s:itl . ' cterm=' . s:itl
+execute 'hi CocInfoVirtualText '    . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non   . ' gui=' . s:itl . ' cterm=' . s:itl
+execute 'hi CocHintVirtualText '    . s:envir . 'fg=' . s:base3 . ' ' . s:envir . 'bg=' . s:non   . ' gui=' . s:itl . ' cterm=' . s:itl
+" ----------------------------------.
+execute 'hi CocInlayHint '          . s:envir . 'fg=' . s:acv70 . ' gui=' . s:itl . ' cterm=' . s:itl
+execute 'hi CocInlayParameter '     . s:envir . 'fg=' . s:acb70 . ' gui=' . s:itl . ' cterm=' . s:itl
+execute 'hi CocInlayType '          . s:envir . 'fg=' . s:acg70 . ' gui=' . s:itl . ' cterm=' . s:itl
 
 " }}}
 " ALE: {{{
